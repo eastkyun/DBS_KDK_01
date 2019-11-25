@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="memberReport02" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="be5471d6-42d8-406a-b257-65329305ec32">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DBS_KDK_01"/>
+	<queryString language="SQL">
+		<![CDATA[select * from dbo.Club]]>
+	</queryString>
+	<field name="club_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="club_id"/>
+	</field>
+	<field name="club_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="club_name"/>
+	</field>
+	<field name="room" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="room"/>
+	</field>
+	<field name="category" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="category"/>
+	</field>
+	<field name="details" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="details"/>
+	</field>
+	<field name="club_url" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="club_url"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="186" y="24" width="182" height="30" uuid="185a801a-12cf-4bab-b822-0c9647644a0e"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Club Report"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="62" splitType="Stretch">
+			<staticText>
+				<reportElement x="30" y="15" width="100" height="30" uuid="d2b73014-502f-4d67-b1f0-d7d4ba55d223">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7510f5c6-b34e-4e2b-b84c-ab55652ba166"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Club Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="15" width="100" height="30" uuid="b36309c4-b0e9-45a7-9ce5-cd2c8203c5f4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a6e1e7ea-87cf-4c7c-8293-66a9f148954d"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Club Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="16" width="100" height="30" uuid="025d5662-5cdf-4147-b279-810e986f4199">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d8d8a653-4207-4ed4-980c-d116cd906a1b"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="16" width="150" height="30" uuid="2762a255-b2de-4dd7-8999-edb1a8dba38e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5dbcbb44-9eaf-4840-9a70-0056fb715be1"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="16" width="53" height="30" uuid="43c33a9b-9952-4a50-bac8-3cfb3b36e2e5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3a7e8a5d-c085-4f9e-82ce-aabd4900e29c"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Room]]></text>
+			</staticText>
+			<line>
+				<reportElement x="30" y="56" width="500" height="1" forecolor="#BFB2BE" uuid="b1a33036-e3cc-49c5-bfe2-65425b46ec71"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="82" splitType="Stretch">
+			<textField>
+				<reportElement x="30" y="10" width="100" height="30" uuid="602a8d27-9328-46ae-9447-823049d3ead4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7510f5c6-b34e-4e2b-b84c-ab55652ba166"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{club_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="10" width="100" height="30" uuid="2cc8e75f-1a13-4624-933c-707b69d7b7ec">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a6e1e7ea-87cf-4c7c-8293-66a9f148954d"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{club_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="10" width="100" height="30" uuid="ec347d2a-06f8-4f12-b7fe-f731dc472cda">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d8d8a653-4207-4ed4-980c-d116cd906a1b"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{category}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="10" width="150" height="30" uuid="599d4c50-92d1-4728-8c1c-84c0ce10fc4c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5dbcbb44-9eaf-4840-9a70-0056fb715be1"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{details}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="227" y="10" width="53" height="30" uuid="b42168a5-17a4-4d5c-a3b8-57fc65a3c5ba">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3a7e8a5d-c085-4f9e-82ce-aabd4900e29c"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{room}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="30" y="70" width="500" height="1" forecolor="#C4BDBC" uuid="b1bc3c82-0140-4470-92fb-ad5c30653eb6"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

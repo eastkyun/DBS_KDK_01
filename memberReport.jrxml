@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="memberReport03" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="85db9c11-894b-4926-8420-14f9faa578e0">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DBS_KDK_01"/>
+	<queryString language="SQL">
+		<![CDATA[select * from dbo.member]]>
+	</queryString>
+	<field name="student_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="student_id"/>
+	</field>
+	<field name="student_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="student_name"/>
+	</field>
+	<field name="birth" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="birth"/>
+	</field>
+	<field name="major" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="major"/>
+	</field>
+	<field name="phone_number" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="phone_number"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="186" y="24" width="182" height="30" uuid="8e13b205-d41c-4670-86eb-2916d9d5164f"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Member Report"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="60" y="5" width="78" height="30" uuid="e7c32227-ff03-4b83-b518-e15a97d7322b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="46231c81-c4f2-405b-983f-57e1eb62adaf"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Student Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="148" y="5" width="100" height="30" uuid="4ef4764c-b073-4b61-956c-768d470886bc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f42bd3ec-6e3d-4446-9221-f91f1a7a5aa5"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Student Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="258" y="5" width="100" height="30" uuid="31098719-ff99-401b-93c5-7d29eba3b707">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="30a2dfd1-e8f1-406e-8792-25d381638d76"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Major]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="5" width="140" height="30" uuid="a295d234-88fc-46f6-ae4e-cc0e9390278c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="eb9f1b55-742e-466d-a3e8-25ab05a68206"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Phone Number]]></text>
+			</staticText>
+			<line>
+				<reportElement x="30" y="41" width="500" height="1" forecolor="#BFB2BE" uuid="9920cdfa-c09b-4cfa-99bd-466f6e9517ed"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="77" splitType="Stretch">
+			<textField>
+				<reportElement x="60" y="5" width="78" height="30" uuid="518213ac-82fb-45a3-bfac-bf2980934c66">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="46231c81-c4f2-405b-983f-57e1eb62adaf"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{student_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="148" y="5" width="100" height="30" uuid="355a1b4d-b13d-4e54-b9af-f4736fd5a16d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f42bd3ec-6e3d-4446-9221-f91f1a7a5aa5"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{student_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="258" y="5" width="100" height="30" uuid="40c9714a-7cb9-41b0-b8b0-0f0a1e3298fd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="30a2dfd1-e8f1-406e-8792-25d381638d76"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{major}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="361" y="5" width="140" height="30" uuid="cdcb44e3-2b8d-4787-8fda-67c6746d92bc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="eb9f1b55-742e-466d-a3e8-25ab05a68206"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{phone_number}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="30" y="56" width="500" height="1" forecolor="#BFB2BE" uuid="4ccd3983-bd70-47e1-b09c-2fc77e0f4a99"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
